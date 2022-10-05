@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.realstateapp.ui.fragment.splash_screen.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_phoneAuth"
+            app:destination="@id/phoneAuth"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneAuth"
+        android:name="com.example.realstateapp.ui.fragment.auth.PhoneAuth"
+        android:label="fragment_phone_auth"
+        tools:layout="@layout/fragment_phone_auth" >
+        <action
+            android:id="@+id/action_phoneAuth_to_otpScreenFragment"
+            app:destination="@id/otpScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otpScreenFragment"
+        android:name="com.example.realstateapp.ui.fragment.auth.OtpScreenFragment"
+        android:label="fragment_otp_screen"
+        tools:layout="@layout/fragment_otp_screen" >
+        <action
+            android:id="@+id/action_otpScreenFragment_to_phoneAuth"
+            app:destination="@id/phoneAuth" />
+        <action
+            android:id="@+id/action_otpScreenFragment_to_personalInformationFragment"
+            app:destination="@id/personalInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalInformationFragment"
+        android:name="com.example.realstateapp.ui.fragment.auth.PersonalInformationFragment"
+        android:label="fragment_personal_information"
+        tools:layout="@layout/fragment_personal_information" >
+        <action
+            android:id="@+id/action_personalInformationFragment_to_otpScreenFragment"
+            app:destination="@id/otpScreenFragment" />
+    </fragment>
+</navigation>

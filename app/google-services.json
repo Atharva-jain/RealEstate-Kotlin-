@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "401961475485",
+    "project_id": "real-state-app-7f2e6",
+    "storage_bucket": "real-state-app-7f2e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401961475485:android:039fc2dd1c685a1b71a374",
+        "android_client_info": {
+          "package_name": "com.example.realstateapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401961475485-4o5pbm8b55cbd85oe8mci8gbj5gm55a7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAl6sV8aHONPzqwY3ItnqY48fPHLnUsnaI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401961475485-4o5pbm8b55cbd85oe8mci8gbj5gm55a7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

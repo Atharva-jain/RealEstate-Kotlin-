@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/real_state_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.realstateapp.ui.fragment.user.HomeFragment"
+        android:label="fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_houseDetailFragment"
+            app:destination="@id/houseDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_moreHomesFragment"
+            app:destination="@id/moreHomesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addHomeFragment"
+        android:name="com.example.realstateapp.ui.fragment.user.AddHomeFragment"
+        android:label="fragment_add_home" >
+        <action
+            android:id="@+id/action_addHomeFragment_to_fillHouseDetails"
+            app:destination="@id/fillHouseDetails" />
+        <action
+            android:id="@+id/action_addHomeFragment_to_ownHomeDetailsFragment"
+            app:destination="@id/ownHomeDetailsFragment" />
+        <action
+            android:id="@+id/action_addHomeFragment_to_editHouseFragment"
+            app:destination="@id/editHouseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.realstateapp.ui.fragment.user.ProfileFragment"
+        android:label="fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_moreHomesFragment"
+            app:destination="@id/moreHomesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fillHouseDetails"
+        android:name="com.example.realstateapp.ui.fragment.user.FillHouseDetails"
+        android:label="fragment_fill_house_details"
+        tools:layout="@layout/fragment_fill_house_details" >
+        <action
+            android:id="@+id/action_fillHouseDetails_to_addHomeFragment"
+            app:destination="@id/addHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editHouseFragment"
+        android:name="com.example.realstateapp.ui.fragment.user.EditHouseFragment"
+        android:label="fragment_edit_house"
+        tools:layout="@layout/fragment_edit_house" >
+        <action
+            android:id="@+id/action_editHouseFragment_to_addHomeFragment"
+            app:destination="@id/addHomeFragment" />
+        <argument
+            android:name="home"
+            app:argType="com.example.realstateapp.data.remote.Home" />
+    </fragment>
+    <fragment
+        android:id="@+id/ownHomeDetailsFragment"
+        android:name="com.example.realstateapp.ui.fragment.user.OwnHomeDetailsFragment"
+        android:label="fragment_own_home_details"
+        tools:layout="@layout/fragment_own_home_details" >
+        <argument
+            android:name="home"
+            app:argType="com.example.realstateapp.data.remote.Home" />
+        <action
+            android:id="@+id/action_ownHomeDetailsFragment_to_addHomeFragment"
+            app:destination="@id/addHomeFragment" />
+        <action
+            android:id="@+id/action_ownHomeDetailsFragment_to_editHouseFragment"
+            app:destination="@id/editHouseFragment"
+            app:popUpTo="@id/ownHomeDetailsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_ownHomeDetailsFragment_to_fullZoomImageFragment"
+            app:destination="@id/fullZoomImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fullZoomImageFragment"
+        android:name="com.example.realstateapp.ui.fragment.user.FullZoomImageFragment"
+        android:label="fragment_full_zoom_image"
+        tools:layout="@layout/fragment_full_zoom_image" >
+        <action
+            android:id="@+id/action_fullZoomImageFragment_to_ownHomeDetailsFragment"
+            app:destination="@id/ownHomeDetailsFragment" />
+        <argument
+            android:name="imageUrl"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchHouseFragment"
+        android:name="com.example.realstateapp.ui.fragment.user.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchHouseFragment_to_houseDetailFragment"
+            app:destination="@id/houseDetailFragment" />
+    </fragment>
+    <action android:id="@+id/action_global_searchFragment" app:destination="@id/searchHouseFragment" />
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.example.realstateapp.ui.fragment.user.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" /><action android:id="@+id/action_global_filterFragment" app:destination="@id/filterFragment"/>
+    <fragment
+        android:id="@+id/houseDetailFragment"
+        android:name="com.example.realstateapp.ui.fragment.user.HouseDetailFragment"
+        android:label="HouseDetailFragment" >
+        <action
+            android:id="@+id/action_houseDetailFragment_to_fullZoomImageFragment"
+            app:destination="@id/fullZoomImageFragment" />
+        <argument
+            android:name="home"
+            app:argType="com.example.realstateapp.data.remote.Home" />
+    </fragment>
+    <fragment
+        android:id="@+id/moreHomesFragment"
+        android:name="com.example.realstateapp.ui.fragment.user.MoreHomesFragment"
+        android:label="fragment_more_homes"
+        tools:layout="@layout/fragment_more_homes" >
+        <argument
+            android:name="collection"
+            app:argType="com.example.realstateapp.data.remote.Values" />
+        <action
+            android:id="@+id/action_moreHomesFragment_to_houseDetailFragment"
+            app:destination="@id/houseDetailFragment" />
+    </fragment>
+</navigation>

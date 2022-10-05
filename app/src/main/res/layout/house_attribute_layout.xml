@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/ownHouseTitleTextView"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="@color/cream_gray"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/ownHouseValueTextView"
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="@color/cream_black"
+        android:textSize="20sp" />
+</LinearLayout>

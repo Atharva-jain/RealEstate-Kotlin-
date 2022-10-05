@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/real_state_constraint_layou"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream_white"
+    tools:context=".ui.activities.RealStateActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/realStateBottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/real_state_menu" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/realStateFragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:focusableInTouchMode="true"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@+id/realStateBottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_movie_layout"
+        app:navGraph="@navigation/real_state_nav"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/search_movie_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardMaxElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/nunito_bold"
+               android:text="@string/find_the_home_you_ll_love"
+               android:textColor="@color/cream_blue"
+               android:textSize="18sp"
+               android:layout_marginTop="8dp"
+               android:layout_marginEnd="8dp"
+               android:layout_marginStart="8dp"
+               android:textStyle="bold" />
+
+           <com.google.android.material.textfield.TextInputLayout
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+               android:id="@+id/search_house_textInputLayout"
+               android:layout_width="match_parent"
+               app:startIconDrawable="@drawable/ic_search_black"
+               app:endIconDrawable="@drawable/ic_filter"
+               app:endIconCheckable="true"
+               app:endIconMode="custom"
+               android:layout_gravity="bottom"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="8dp"
+               android:layout_marginEnd="8dp"
+               android:layout_marginStart="8dp">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/search_house_textInputEditText"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/nunito"
+                   android:gravity="start"
+                   android:hint="@string/search_house"
+                   android:inputType="text"
+                   android:textColor="@color/cream_black"/>
+           </com.google.android.material.textfield.TextInputLayout>
+
+       </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
