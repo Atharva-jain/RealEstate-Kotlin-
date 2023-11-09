@@ -1,6 +1,6 @@
 # Real Estate App
-![logo512](https://github.com/Atharva-jain/RealEstate-Kotlin-/assets/84101268/1e06af4e-1529-4056-8a50-fd7eb1b506dc)
 
+![logo256](https://github.com/Atharva-jain/RealEstate-Kotlin-/assets/84101268/f1f4fc2e-2119-4a66-9dcc-cd75c2dad0e0)
 
 Welcome to the Real Estate App, a comprehensive platform for buying, selling, and renting houses. This Android application facilitates seamless transactions and connects homeowners with potential buyers or renters. With features like mobile number authentication, personalized recommendations, and a user-friendly interface, the Real Estate App is designed to streamline the real estate experience.
 
